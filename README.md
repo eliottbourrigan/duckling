@@ -1,14 +1,9 @@
 ### Quickstart
 
-To login to Azure CLI:
+To create and get access to the VM:
 
 ```bash
-az login --use-device-code
-```
-
-To create a new VM:
-
-```bash
+# Create the VM
 az vm create `
     --resource-group ducklings-group `
     --name duckling2 `
@@ -19,23 +14,14 @@ az vm create `
     --public-ip-sku Standard `
     --authentication-type password `
     --no-wait
-```
 
-To open port 80:
-
-```bash
+# Open port 80
 az vm open-port --port 80 --resource-group ducklings-group --name duckling2
-```
 
-To get the public IP address:
-
-```bash
+# Get the public IP
 az vm show -d -g ducklings-group -n duckling2 --query publicIps -o tsv
-```
 
-To SSH into the VM:
-
-```bash
+# SSH into the VM
 ssh myadmin@4.212.10.34
 ```
 
