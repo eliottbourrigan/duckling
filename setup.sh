@@ -16,5 +16,5 @@ git clone https://github.com/eliottbourrigan/duckling
 cd duckling
 
 # Build and run the container
-docker build -t duckling .
-docker run -p 80:80 duckling
+sudo docker build -t duckling .
+sudo docker run -p 80:80 duckling
